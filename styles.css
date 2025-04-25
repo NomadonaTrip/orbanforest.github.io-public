@@ -1,0 +1,495 @@
+header {        
+    text-decoration: none;
+    margin: 0; padding: 0;
+    width: 100%; height: 60px;    
+}
+header * {
+    list-style: none;
+}
+.inner-header {
+    width: 90%; height: 100%;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+.logo-container {
+    height: 100%; 
+    display: flex;            
+}
+.logo-container * {
+    align-items: center;
+}
+.logo-container img {
+    height: 100%;    
+    
+}
+.navigation {   
+    height: 100%;
+    
+}
+.navigation a {
+    height: 100%; display: table; 
+    align-items: center;
+    padding: 0px 20px;
+    float: left;    
+    text-decoration: none;
+    color: white;
+}
+.navigation a:last-child {
+    padding-right: 0px;
+}
+.navigation a li {
+    display: table-cell;
+    vertical-align: middle;
+    
+}
+.navigation button {
+    height: 40px; width: 80px;
+    font-size: 1rem;    
+    border: 1px solid gray;
+    border-radius: 10px;
+    background-color: transparent;
+    color: white; text-transform: capitalize;
+}
+
+body {    
+    font-family: "questrial";
+    font-optical-sizing: auto;
+    font-style: normal; 
+    color: white;
+    background-color: #151515; 
+    background-image: radial-gradient(#2c2c2c 1px, transparent 1px);
+    background-size: 30px 30px;
+       
+}
+/* body::before {
+    content: "";
+    position: absolute; 
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: #2c2c2c;
+    transform: scale(0.1);
+    box-shadow: 0 0 10px #2c2c2c,
+                0 0 20px #2c2c2c,
+                0 0 40px #2c2c2c,
+                0 0 60px #2c2c2c,;
+} */
+.hero {
+    padding: 2%; height: 100%;
+    padding-right: 5%; padding-left: 4%
+
+}
+.hero-main {
+    display: flex; width: 100%;
+    height: 65dvh; 
+}
+#hero-text {
+    width: 67%; height: 70%;
+    
+}
+#hero-subtitle {
+    display: flex; flex-direction: column;
+    justify-content: flex-end; 
+    width: 30%; padding-bottom: 1%;    
+}
+#hero-subtitle h3 {
+    font-weight: 300; font-size: 1.8rem;    
+}
+#this-matters {
+    margin-top: -2%;
+}
+#hero-subtitle button {
+    width: 120px; height: 40px;
+    font-size: 1rem; background-color: transparent;
+    border: 1px solid #7222ad; border-radius: 10px; color: white;
+    font-family: "Exo 2", sans-serif;
+    justify-content: center; text-transform: capitalize;
+}
+#hero-subtitle button:hover {
+    background-color: #7222ad; color: white;
+    transition-duration: .4s;
+}
+#hero-reasons {
+    display: flex; margin-top: 4%; height: 30dvh;
+    
+}
+/* the reason class describes the behavior of each block of text highlighting a selling point */
+.reason {
+    display: flex; flex-direction: column; height: 20%;
+    margin-right: 2px; justify-content: space-between;
+}
+/* The reason-count id describes the behavior of the numeral associated with each selling point */
+.reason #reason-count  {
+    display: flex; align-items: flex-end;
+}
+.reason #square {
+    width: 15px; height: 15px; 
+    background-color: #7222ad;
+    margin-right: 2%;
+}
+.reason h2 {
+    margin-top: 1%;
+}
+.reason>p {
+    display: flex; justify-content: flex-start;
+    margin-top: 0.5%;
+}
+
+h1 {
+    font-size: 6.5rem;
+}
+hr {
+    height: 1px solid gray;
+}
+/* This section describes the Buyer Conversation section of the home page */
+#conversation {
+    font-size: 4rem;
+    font-weight: lighter;
+    font-family: "questrial", sans-serif;
+    display: flex; flex-direction: column;
+    padding-left: 16%; padding-right: 15%;    
+}
+#conversation #main-question {
+    margin-top: -5%;
+    color: gray;
+}
+#conversation button {
+    margin-top: -2%;
+    width: 150px; height: 40px;
+    font-size: 1rem; background-color: transparent;
+    border: 1px solid #7222ad; border-radius: 10px; color: white;
+    font-family: "Exo 2", sans-serif;    
+}
+#conversation button:hover {
+    background-color: #7222ad; color: white;
+    transition: 0.5s ease-in-out;
+}
+/* This section describes the "our work" section of the home page */
+
+
+.our-work {    
+    width: 100%;
+    display: flex; flex-direction: column;
+    justify-content: center;
+    margin-top: 3%; margin-bottom: 5%;
+    
+}
+.project {
+    margin: 1%;
+    
+}
+.description {
+    width: 30%;
+    padding-left: 5%; padding-right: 5%;
+    font-size: 1rem;
+    margin-left: 10%;
+    margin-bottom: 4%;
+    border: 1px;
+}
+
+#description-header {
+    display: flex; align-items: center;
+    border: 1px solid gray;
+    border-radius: 20px; padding: 2%;
+    background-color: #050505;
+    color: white;
+
+}
+#description-header h3 {
+    background-color: #7222ad; padding: 1.5%;
+    border-radius: 10px; 
+    margin-left: 2%; margin-right: 2%;
+}
+#description-header button {
+    width: 150px; height: 40px;
+    font-size: 1rem; background-color: transparent;
+    border: 1px solid gray; border-radius: 10px; color: white;
+    font-family: "Exo 2", sans-serif; 
+    justify-content: space-around; text-transform: capitalize;       
+}
+.fas {
+    font-size: 24px; color: gray;
+}
+#description-header a {
+    text-decoration: none; color: gray;    
+}
+.description p {
+    font-weight: 300; font-size: 1.1rem;
+}
+.image-grid {
+    display: flex; justify-content: center;
+}
+.project-images {
+    width: 70%; height: 220px;
+    display: grid; 
+    grid-template-columns:  1fr 1fr 1fr 1fr; 
+    gap: 15px;   
+    grid-template-rows: 1fr;    
+}
+.project-images * {
+    background-color: transparent;
+    border-radius: 30px; 
+    border: 1px solid gray;
+}
+/* This section describes the How We Work section of the home page */
+.our-process {
+    display: flex; flex-direction: column;
+    align-items: center;
+    
+   
+}
+.our-process h3 {
+    font-size: 2rem; margin-top: 3%;
+    margin-bottom: 5%; text-transform: capitalize;
+}
+#process-icons {
+    display: flex;
+}
+
+.our-process p {
+    font-size: 1.2rem;
+}
+#process-2 {
+    display: grid; width: 60%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 3rem;
+}
+#icon {
+    display: flex; flex-direction: column; 
+    align-items: center; 
+}
+#process-2 img {
+    width: 70px; display: flex; justify-content: center;
+    
+
+}
+#icon>p {
+    width: 150px; text-align: center; text-transform: capitalize;
+}
+
+#ready-to-create {
+    display: flex; flex-direction: column;
+    justify-content: center;
+    align-items: center; width: 100%; height: 50vh;
+    background-color: #050505;
+    margin-top: 5%;
+    
+}
+
+#ready-to-create h4 {
+    font-size: 3rem;
+    text-transform: capitalize; font-weight: 200;
+}
+#ready-to-create button {
+    width: 200px; height: 50px;
+    font-size: 1.4rem; background-color: transparent;
+    border: 1px solid gray; border-radius: 10px; color: white;
+    font-family: "Exo 2", sans-serif; 
+    justify-content: space-around; text-transform: capitalize;  
+    margin-bottom: 5%;     
+}
+
+/* The About Us page begins here */
+.about-us {
+    width: 100%;
+    display: flex; justify-content: center;
+    margin-top: 5%; margin-bottom: 5%;
+}
+.about-us-text {
+    width: 20%;
+    padding-left: 5%; padding-right: 5%;
+    font-size: 1.5rem;
+}
+.about-us-text h3 {
+    font-size: 1.2rem; margin-bottom: -5%;
+}
+.about-us-text p {
+    font-weight: 400;
+}
+.about-us-img {
+    width: 40%; height: 50dvh;
+    background-color: aquamarine;
+    border-radius: 40px;
+}
+.about-us-text button {
+    width: 120px; height: 40px;
+    font-size: 1rem; background-color: #7222ad;
+    border: none; border-radius: 10px; color: white;
+    font-family: "Exo 2", sans-serif;
+    justify-content: center; text-transform: capitalize;
+}
+/* This section describes the service offering area of the About Us page */
+
+.services {
+    
+    display: flex; flex-direction: column;
+    justify-content: center; 
+    margin-top: 5%;
+    margin-left: 20%; margin-right: 20%;
+}
+#services-header {    
+    padding-left: 1%; 
+    font-size: 1.5rem;        
+}
+#services-header h3 {
+    font-size: 1.2rem; margin-bottom: -1%;     
+}
+
+.service-offering {   
+    height: 15vh; 
+    border: 1px solid gray; border-radius: 20px;
+    padding: 1% 2%; 
+    display: flex; 
+    margin-bottom: 2%; 
+    overflow: hidden;
+    justify-content: center;
+    
+}
+.service {
+    display: flex;
+    align-items: center; justify-content: space-between;
+    width: 100;
+}
+.service-hover {
+    display: flex; flex-direction: column; transform: translateY(10px);
+    transition: .3s cubic-bezier(0.3, 0.8, 0.3, 1.5);
+}
+.service-hover:hover {
+    transform: translateY(-155px); transition: .3s cubic-bezier(0.3, 0.8, 0.3, 1.5);
+}
+.service>h3 {
+    font-size: 4rem; display: flex; align-items: center;
+    width: 50%; justify-content: flex-start; transform: translateY(-35px);  
+}
+
+.service-hover ul {     
+    display: flex; justify-content: space-between;
+    width: 50%; transform: translateY(-35px);
+    text-transform: capitalize;
+    font-size: 1.1rem;
+}
+#children-book {
+    width: 150px;
+}
+
+.services button {
+    height: 100px; font-size: 2rem;
+    margin-bottom: 5rem;
+    border: 1px solid gray;
+    border-radius: 20px;
+    background-color: transparent;
+    color: white; text-transform: capitalize;
+}
+
+#scrolling-pictures { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+.scroller {
+    background-color: antiquewhite;
+    width: 165px; height: 14vh;
+    transform: translateY(-35px);
+    border-radius: 20px;
+}
+
+/* This section describes the Contact Us page */
+
+.contact-page {
+    width: 100%;
+    margin-left: 20%; margin-right: 20%;
+    
+    display: flex;
+}
+.contact-page label {
+    font-size: .9rem;
+}
+.contact-message {
+    width: 20%;
+    padding: 1rem;
+    height: 80dvh;
+    border: 1px solid gray;
+    border-radius: 20px;
+    margin-top: 2rem;
+    margin-right: 1rem;
+}
+.contact-form {
+    width: 40%; 
+    margin-top: 6rem;
+}
+#client-name {
+    margin-bottom: 5px;
+}
+.personal-information {
+    display: flex; flex-direction: column;    
+    border: 1px solid gray;
+    width: 32rem;
+    border-radius: 20px;
+    padding: 20px;
+}
+.personal-information input[type="text"] {
+    width: 15rem; margin-right: 10px;
+}
+.personal-information input[type="email"] {
+    width: 15rem; margin-right: 10px;
+}
+
+input[type="text"],input[type="email"] {
+    width: 18rem; height: 1.4rem;
+    border-radius: 10px;
+    border: 1px solid gray;
+    color: gray; background-color: transparent;
+    padding: 3px;     
+} 
+#client-name {
+    display: flex; 
+}
+
+
+#client-contact {
+    display: flex;
+}
+#company-url input[type="text"] {
+    width: 31rem;
+}
+.project-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    padding-top: 15px;
+}
+.project-info>* {
+    background-color: transparent;
+    border-radius: 20px;
+    padding: 15px;
+    border: 1px solid gray;
+
+}
+#message {
+    grid-column: span 2;
+    height: 8rem;
+    display: flex; flex-direction: column;
+}
+
+#message textarea {
+    border-radius: 10px;
+    border: 1px solid gray;
+    background: transparent;
+    font-family: "Exo 2", sans-serif;
+    font-size: medium;
+    color: white;
+    padding: 1rem;
+    
+}
+form button {
+    width: 100%; height: 2rem;
+    margin-top: 0.5rem;
+    font-family: "Exo 2", sans-serif;
+    font-size: 1rem; font-weight: 500;
+    color: white;
+    background: transparent;
+    border: 1px solid gray;
+    border-radius: 10px;
+    
+}
