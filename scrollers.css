@@ -1,0 +1,126 @@
+.scroller1 {
+    background-image: url("images/services/website1.JPG");
+    object-fit: cover;
+    width: 165px; height: 14vh;
+    transform: translateY(-35px);
+    border-radius: 20px;
+}
+.scroller2 {
+    background-image: url("images/services/website8.jpg");
+    object-fit: cover;
+    width: 165px; height: 14vh;
+    transform: translateY(-35px);
+    border-radius: 20px;
+}
+.scroller3 {
+    background-image: url("images/services/website2_1.jpg");
+    object-fit: scale-down;
+    width: 165px; height: 14vh;
+    transform: translateY(-35px);
+    border-radius: 20px;
+}
+.scroller4 {
+    background-image: url("images/services/website9.jpg");
+    object-fit: cover;
+    width: 165px; height: 14vh;
+    transform: translateY(-35px);
+    border-radius: 20px;
+}
+.scroller5 {
+    background-image: url("images/services/website6.JPG");
+    object-fit: cover;
+    width: 165px; height: 14vh;
+    transform: translateY(-35px);
+    border-radius: 20px;
+}
+.scroller6 {
+    background-image: url("images/services/website5.JPG");
+    object-fit: contain;
+    width: 165px; height: 14vh;
+    transform: translateY(-35px);
+    border-radius: 20px;
+}
+.scroller7 {
+    background-image: url("images/services/animation1.jpg");
+    object-fit: cover;
+    width: 165px; height: 14vh;
+    transform: translateY(-35px);
+    border-radius: 20px;
+}
+.scroller8 {
+    background-image: url("images/services/animation1_1.png");
+    object-fit: cover;
+    width: 165px; height: 14vh;
+    transform: translateY(-35px);
+    border-radius: 20px;
+}
+.scroller9 {
+    background-image: url("images/services/animation6.png");
+    object-fit: cover;
+    width: 165px; height: 14vh;
+    transform: translateY(-35px);
+    border-radius: 20px;
+}
+.scroller10 {
+    background-image: url("images/services/animation2.png");
+    object-fit: cover;
+    width: 165px; height: 14vh;
+    transform: translateY(-35px);
+    border-radius: 20px;
+}
+.scroller11 {
+    background-image: url("images/services/animation5.jpg");
+    object-fit: cover;
+    width: 165px; height: 14vh;
+    transform: translateY(-35px);
+    border-radius: 20px;
+}
+.scroller12 {
+    background-image: url("images/services/animation5.png");
+    object-fit: cover;
+    width: 165px; height: 14vh;
+    transform: translateY(-35px);
+    border-radius: 20px;
+}
+.scroller13 {
+    background-image: url("images/services/illustration1.jpg");
+    object-fit: cover;
+    width: 165px; height: 14vh;
+    transform: translateY(-35px);
+    border-radius: 20px;
+}
+.scroller14 {
+    background-image: url("images/services/Illustration2.jpg");
+    object-fit: cover;
+    width: 165px; height: 14vh;
+    transform: translateY(-35px);
+    border-radius: 20px;
+}
+.scroller15 {
+    background-image: url("images/services/illustration3.jpg");
+    object-fit: cover;
+    width: 165px; height: 14vh;
+    transform: translateY(-35px);
+    border-radius: 20px;
+}
+.scroller16 {
+    background-image: url("images/services/Illustration4.JPG");
+    object-fit: cover;
+    width: 165px; height: 14vh;
+    transform: translateY(-35px);
+    border-radius: 20px;
+}
+.scroller17 {
+    background-image: url("images/services/Illustration5.jpg");
+    object-fit: cover;
+    width: 165px; height: 14vh;
+    transform: translateY(-35px);
+    border-radius: 20px;
+}
+.scroller18 {
+    background-image: url("images/services/Illustration6.jpg");
+    object-fit: cover;
+    width: 165px; height: 14vh;
+    transform: translateY(-35px);
+    border-radius: 20px;
+}

@@ -6,6 +6,8 @@ class SpecialHeader extends HTMLElement {
         <div class="inner-header">
             <div class="logo-container">
                 <a href="index.html"><img src="images/icons/logo/Orban Forest Logo_white_website.png"/></a>
+                <a href="index.html"><p>Orban Forest Inc.</p></a>
+                
             </div>
             <ul class="navigation">
                 <a href="index.html"><li>Home</li></a>
