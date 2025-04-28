@@ -24,6 +24,29 @@ class SpecialHeader extends HTMLElement {
 
 customElements.define('special-header', SpecialHeader);
 
+class SpecialFooter extends HTMLElement {
+  connectedCallback() {
+    this.innerHTML = `
+    <footer class="footer-container">
+        
+        <div class="inner-footer">
+            
+            <div class="footer-info">
+                <p>+13659948961</p>
+                <a href=#top><img src="images/icons/arrow_white_1.png"></a>  
+                <p>hello@orbanforest.ca</p>                                              
+            </div>
+            <div class="copyright"><p>Orban Forest Inc &copy; 2025</p></div>
+        </div>
+
+    </footer>
+    `;
+  }
+}
+
+
+customElements.define('special-footer', SpecialFooter);
+
 
 // The header and footer templating ends here
 
