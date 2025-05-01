@@ -3,6 +3,8 @@
         "*": false,
         "plaintext": false,
         "markdown": false,
-        "scminput": false
+        "scminput": false,
+        "html": true,
+        "css": false
     }
 }

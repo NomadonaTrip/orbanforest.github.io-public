@@ -169,7 +169,8 @@ hr {
     border: 1px solid #7222ad; border-radius: 10px; 
     color: white;
     font-family: "Exo 2", sans-serif;
-    text-transform: capitalize;    
+    text-transform: capitalize; 
+    margin-bottom: 8%;   
 }
 #conversation button:hover {
     background-color: #7222ad; color: white;
@@ -179,6 +180,11 @@ hr {
     color: white;
     text-decoration: none;
 }
+
+.conversation-hr {
+    width: 90%;
+}
+
 /* This section describes the "our work" section of the home page */
 
 
@@ -267,6 +273,9 @@ button .youtube:hover {
     object-fit: cover;
 }
 /* This section describes the How We Work section of the home page */
+.process-hr {
+    width: 90%;
+}
 .our-process {
     display: flex; flex-direction: column;
     align-items: center;
@@ -349,6 +358,7 @@ button .youtube:hover {
 .about-us-img {
     width: 40%; height: 50dvh;
     background-image: url(images/services/website7.jpg);
+    background-position: center center;
     border-radius: 40px;
 }
 .about-us-text button {
@@ -577,3 +587,294 @@ footer {
     justify-content: center;
 }
 
+/* This section describes how the home page will look on tablets and on mobile devices. */
+/* This section describes media queries for the Home page */
+
+
+/* Mobile Phones: 360px - 480px */
+@media (max-width: 480px) {
+    .hero-main {
+        flex-direction: column;
+        align-items: flex-start;
+        overflow: hidden;
+    }
+    #hero-text {
+        width: 95%;
+        text-align: left;
+        padding-right: 15%;        
+    }
+    #hero-text h1 {
+        font-size: 2.5rem;
+        margin-top: 10%;
+    }
+    #hero-subtitle {
+        width: 90%;
+        padding-right: 10%;
+        margin-top: -12rem;
+    }
+    #hero-subtitle h3 {
+        font-size: 1rem;    
+    }
+    #hero-reasons {
+        flex-direction: column;
+        margin-top: -150px;
+    }
+    .reason {
+        margin-bottom: 40px;
+    }
+    .reason h2 {
+        font-size: 1rem;
+    }
+    .reason p {
+        font-size: 0.8rem;
+    }
+    .hero-hr {
+        margin-top: 220px;
+    }
+    #conversation {
+        font-size: 2rem;
+        padding-left: 2%;
+    }
+    .conversation-hr {
+        margin: 30px 0px;    
+    }
+
+    .description {
+        width: 100%;
+        margin-top: 6%;
+        margin-left: 0;
+        padding: 0;
+    }
+    .description p {
+        font-size: 1rem;
+    }
+    .project-images {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    .our-process h3 {        
+        text-align: center;
+        
+    }
+    #process-2 {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        width: 100%;
+    }
+    #ready-to-create h4 {
+        font-size: 2rem;
+        text-align: center;
+    }
+    #ready-to-create button {
+        width: 150px;
+        font-size: 1rem;
+    }
+    /* This section includes max screen size 480px media queries for the About Us page */
+    .about-us {
+        flex-direction: column;
+        align-items: flex-start; 
+        width: 100%;
+        padding: 0 5%;
+        margin: 0;               
+    }
+    .about-us-text {
+        width: 90vw;
+        padding: 0; margin: 0;        
+    }
+    .about-us-text h3 {
+        
+        margin-top: 20%;
+    }
+    .about-us-text h2 {
+        font-size: 1.8rem;
+        margin-top: 20%;
+    }
+    .about-us-text p {
+        font-size: 1.1rem;
+        margin-top: 0%;
+    }
+    .about-us-text button {
+        width: 40%;
+        height: 40px;
+        font-size: 1rem;
+        background-color: #7222ad;
+        border: none;
+        border-radius: 10px;
+        color: white;
+        font-family: "Exo 2", sans-serif;
+        justify-content: center;
+        text-transform: capitalize;
+        margin-top: 15%;
+    }
+    .about-us-img {
+        width: 90%;
+        height: 30vh;
+        margin-top: 10%;
+        margin-bottom: 10%;
+        background-size: cover;
+    }
+    .services {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .service-offering {
+        flex-direction: column;
+        align-items: center;
+    }
+    .service {
+        width: 100%;
+        margin-bottom: 10%;
+    }
+    .service h3 {
+        font-size: 2rem;
+    }
+    .service ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+    .service li {
+        font-size: 1rem;
+    }
+    .service-hover {
+        width: 100%;
+        transform: translateY(250px);
+    }
+    #scrolling-pictures {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+    .contact-page {
+        flex-direction: column;
+        padding: 10px;
+    }
+    .contact-message {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .contact-form {
+        width: 100%;
+    }
+    .personal-information, .project-info {
+        flex-direction: column;
+    }
+    #client-name, #client-contact {
+        flex-direction: column;
+    }
+    #client-name div, #client-contact div {
+        width: 100%;
+    }
+    button {
+        width: 100%;
+        font-size: 1rem;
+    }
+}
+@media screen and (min-width:300px) and (max-width: 380px) {
+    #hero-text h1 {
+        font-size: 2.3rem;
+    }
+    #hero-subtitle {
+        width: 100%;
+        padding: 0;
+        margin-top: -40%;
+    }
+    #hero-subtitle h3 {
+        font-size: 1rem;
+        margin-top: -2%;    
+    }
+    #hero-reasons {
+        flex-direction: column;
+        margin-top: -130px;
+    }
+    .reason {
+        margin-bottom: 15%;
+    }
+    .reason h2 {
+        margin-top: .7%;
+    }
+    .reason>p {
+        margin-top: 0;
+    }
+    .hero-hr {
+        margin-top: 20%;
+    }
+}
+/* Small Tablets: 481px - 768px */
+@media (min-width: 481px) and (max-width: 768px) {
+    .hero-main {
+        flex-direction: column;
+        align-items: center;
+    }
+    #hero-text {
+        width: 100%;
+        text-align: center;
+        font-size: 2rem;
+    }
+    #hero-subtitle {
+        width: 100%;
+        padding: 0;
+    }
+    .project-images {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+    #process-2 {
+        grid-template-columns: 1fr 1fr;
+    }
+    #ready-to-create h4 {
+        font-size: 2.5rem;
+    }
+    #ready-to-create button {
+        width: 180px;
+        font-size: 1.2rem;
+    }
+    .about-us {
+        flex-direction: column;
+        align-items: center;
+    }
+    .about-us-text {
+        width: 80%;
+        text-align: center;
+    }
+    .about-us-img {
+        width: 80%;
+        height: 40vh;
+        margin-top: 20px;
+    }
+    .services {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .service-offering {
+        flex-direction: column;
+        align-items: center;
+    }
+    #scrolling-pictures {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 15px;
+    }
+    .contact-page {
+        flex-direction: column;
+        padding: 20px;
+    }
+    .contact-message {
+        width: 100%;
+        text-align: center;
+    }
+    .contact-form {
+        width: 100%;
+    }
+    .personal-information, .project-info {
+        flex-direction: column;
+    }
+    #client-name, #client-contact {
+        flex-direction: column;
+    }
+    #client-name div, #client-contact div {
+        width: 100%;
+    }
+    button {
+        width: auto;
+        font-size: 1.2rem;
+    }
+}
