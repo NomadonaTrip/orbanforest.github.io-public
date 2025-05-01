@@ -1,3 +1,4 @@
+
 header {        
     text-decoration: none;
     margin: 0; padding: 0;
@@ -463,6 +464,7 @@ button .youtube:hover {
 }
 .contact-message ul {
     list-style: none;
+    padding-left: 0;
 }
 .contact-form {
     width: 43%; 
@@ -476,7 +478,7 @@ button .youtube:hover {
     align-items: center;    
     border: 1px solid gray;
     width: 95%;
-    border-radius: 20px;
+    border-radius: 10px;
     padding: 20px;
 }
 .personal-information input[type="text"] {
@@ -487,8 +489,8 @@ button .youtube:hover {
 }
 
 input[type="text"],input[type="email"] {
-    width: 18rem; height: 1.4rem;
-    border-radius: 10px;
+    height: 1.4rem;
+    border-radius: 5px;
     border: 1px solid gray;
     color: gray; background-color: transparent;
     padding: 3px;     
@@ -509,16 +511,17 @@ input[type="text"],input[type="email"] {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 15px;
     padding-top: 15px;
+    width: 100%;
 }
 .project-info>* {
     background-color: transparent;
-    border-radius: 20px;
+    border-radius: 10px;
     padding: 15px;
     border: 1px solid gray;
 }
 #service-required {
     display: flex;
-    flex-direction: column;
+    flex-direction: column;    
 }
 
 #message {
@@ -548,6 +551,7 @@ form button {
     border: 1px solid gray;
     border-radius: 10px;    
 }
+/* This section describes the page footer */
 footer {
     padding: 0;
     list-style: none; text-decoration: none;
@@ -593,6 +597,7 @@ footer {
 
 /* Mobile Phones: 360px - 480px */
 @media (max-width: 480px) {
+    
     .hero-main {
         flex-direction: column;
         align-items: flex-start;
@@ -744,30 +749,57 @@ footer {
         grid-template-columns: 1fr 1fr;
         gap: 10px;
     }
+    /* This section describes the contact page for mobile phones width 360px - 480px */
+    * {box-sizing: border-box;}
     .contact-page {
-        flex-direction: column;
+        flex-direction: column;       
         padding: 10px;
+        width: 100%;
+    }
+    .contact-page>* {
+        justify-content: center;
+        align-items: center;
     }
     .contact-message {
         text-align: center;
+        align-self: center;
         margin-bottom: 20px;
+        width: 100%;        
     }
     .contact-form {
         width: 100%;
     }
     .personal-information, .project-info {
-        flex-direction: column;
+        flex-direction: column; align-items: center;
     }
+
     #client-name, #client-contact {
         flex-direction: column;
     }
     #client-name div, #client-contact div {
         width: 100%;
     }
+    #client-name input[type="text"] {
+        width: 18rem;
+    }
+    #client-contact input[type="text"] {
+        width: 18rem;
+    }
+    #client-contact input[type="email"] {
+        width: 18rem;
+    }
+    #company-url input[type="text"] {
+        width: 18rem;    
+    }
+    .project-info>* {
+        width: 79vw; 
+    }
     button {
-        width: 100%;
+        
         font-size: 1rem;
     }
+    
+    
 }
 @media screen and (min-width:300px) and (max-width: 380px) {
     #hero-text h1 {
@@ -814,6 +846,15 @@ footer {
         width: 100%;
         padding: 0;
     }
+    .description {
+        margin-left: 0;
+        width: 90%;
+        padding-left: 0%;
+    }
+
+    .description p {
+        width: 35rem;
+    }
     .project-images {
         grid-template-columns: 1fr 1fr;
         gap: 15px;
@@ -853,6 +894,7 @@ footer {
         grid-template-columns: 1fr 1fr 1fr;
         gap: 15px;
     }
+    /* This section describes mobile dimensions for the Contact Us page */
     .contact-page {
         flex-direction: column;
         padding: 20px;
@@ -874,7 +916,253 @@ footer {
         width: 100%;
     }
     button {
-        width: auto;
+        width: 18rem;
         font-size: 1.2rem;
     }
 }
+
+
+@media screen and (max-width: 1024px) {
+    .contact-page {
+      margin-left: 0%;
+      margin-right: 0%;
+    }
+    
+    .contact-message {
+      width: 30%;
+      height: auto;
+    }
+    
+    .contact-message h1 {
+      font-size: 3rem;
+    }
+    
+    .contact-form {
+      width: 60%;
+    }
+    
+    .personal-information input[type="text"],
+    .personal-information input[type="email"] {
+      width: 14rem;      
+    }
+    
+    #company-url input[type="text"] {
+      width: 29rem;
+    }
+    .description {
+        margin-left: 0;
+        width: 90%;
+        padding-left: 0%;
+    }
+
+    .description p {
+        width: 35rem;
+    }
+    
+  }
+  
+  /* Media Query for 480px - 768px (mobile large/tablet small) */
+  @media screen and (max-width: 768px) {
+    .contact-page {
+      flex-direction: column;
+      margin-left: 0%;
+      margin-right: 0%;
+    }
+    
+    .contact-message {
+      width: 90%;
+      height: 100%;      
+      margin: 2rem auto;
+      padding: 1.5rem;
+    }
+    
+    .contact-message h1 {
+      font-size: 2.5rem;
+    }
+    
+    .contact-form {
+      width: 90%;
+      margin: 0 auto;
+    }
+    
+    .personal-information {
+      width: 90%;
+    }
+    
+    #client-name, #client-contact {
+      flex-direction: column;
+    }
+    
+    #client-name > div, #client-contact > div {
+      margin-bottom: 10px;
+    }
+    
+    .personal-information input[type="text"],
+    .personal-information input[type="email"] {
+      width: 25rem;
+      margin-right: 0;
+      box-sizing: border-box;
+    }
+    
+    input[type="text"],
+    input[type="email"] {
+        box-sizing: border-box;
+    }
+    
+    #company-url input[type="text"] {
+      width: 25rem;
+    }
+    
+    .project-info {
+      grid-template-columns: 1fr 1fr;
+    }
+    
+    #message {
+      grid-column: span 2;
+    }
+    
+    .inner-footer {
+      width: 90%;
+    }
+    
+    .footer-info {
+      width: 100%;
+      flex-wrap: wrap;
+    }
+  }
+  
+  /* Media Query for 360px - 480px (mobile medium) */
+  @media screen and (max-width: 480px) {
+    .contact-page {
+      margin-left: 0%;
+      margin-right: 0%;
+    }
+    
+    .contact-message {
+      width: 94%;
+      padding: 1rem;
+    }
+    
+    .contact-message h1 {
+      font-size: 2rem;
+    }
+    
+    .contact-form {
+      width: 94%;
+    }
+    
+    .personal-information {
+      width: 94%;
+      padding: 15px;
+    }
+    #company-url input[type="text"] {
+        width: 18rem;
+    }
+    
+    .project-info {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+    
+    #message {
+      grid-column: span 1;
+    }
+    
+    form button {
+      font-size: 1.2rem;
+      height: 2.5rem;
+      width: 92%;
+    }
+    
+    .inner-footer {
+      width: 95%;
+    }
+    
+    .footer-logo {
+      width: 90%;
+    }
+  }
+  
+  /* Media Query for 300px - 360px (mobile small) */
+  @media screen and (max-width: 360px) {
+    .contact-page {
+      margin-left: 0%;
+      margin-right: 0%;
+    }
+    
+    .contact-message {
+      width: 96%;
+      padding: 0.8rem;
+      margin-top: 2rem;
+    }
+    
+    .contact-message h1 {
+      font-size: 1.8rem;
+    }
+        
+    .contact-form {
+      width: 96%;
+      margin-top: 3rem;
+    }
+    
+    .personal-information {
+      width: 96%;
+      padding: 10px;      
+    }
+    
+    #client-name input[type="text"] {
+        width: 15rem;
+
+    }
+    #client-contact input[type="email"] {
+        width: 15rem;
+        box-sizing: border-box;
+        align-self: center;
+    }
+    #client-contact input[type="text"] {
+        width: 15rem;
+        box-sizing: border-box;
+        align-self: center;
+    }
+    #company-url input[type="text"] {
+        width: 15rem;
+    }
+    input[type="text"],
+    input[type="email"] {
+      width: 10rem;
+      box-sizing: border-box;      
+    }    
+    
+    .project-info {
+      padding-top: 10px;
+    }
+    
+    .project-info > * {
+      padding: 10px;
+    }
+    
+    #message {
+      height: 10rem;
+    }
+    
+    #message textarea {
+      height: 8rem;
+    }
+    
+    form button {
+      font-size: 1rem;
+      height: 2.2rem;
+      align-self: center;
+      width: 18rem;
+    }
+    
+    .inner-footer {
+      padding: 40px 0;
+    }
+    
+    .footer-info {
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+  }

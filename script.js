@@ -13,7 +13,7 @@ class SpecialHeader extends HTMLElement {
                 <a href="index.html"><li>Home</li></a>
                 <a href="about-us.html"><li>About Us</li></a>
                 <a href="contact-us.html"><li>Contact Us</li></a>
-                <a><li><button>Call Us</button></li></a>
+                <a href="tel:+13659948961"><li><button>Call Us</button></li></a>
             </ul>
         </div>
     </header>
