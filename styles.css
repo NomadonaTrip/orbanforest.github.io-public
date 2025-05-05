@@ -1,4 +1,122 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
 
+:root {
+    --bar-width: 60px;
+    --bar-height: 8px;
+    --foreground: white;
+    --background: black;
+    --hamburger-gap: 6px;
+    --hamburger-margin:10px;
+    --animation-timing: 200ms ease-in-out;
+    --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+}
+.responsive-header {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    align-items: center;
+}
+.responsive-header>.mobile-call-button {
+    align-items: center;
+}
+.mobile-call-button {
+    display: none;    
+    top: var(--hamburger-margin);
+    left: 50%;    
+    z-index: 2;
+}
+.mobile-call-button button {
+    height: 40px;
+    width: 100px;
+    font-size: 1rem;
+    border: 1px solid gray;
+    border-radius: 10px;
+    background-color: transparent;
+    color: white;
+    text-transform: capitalize;
+}
+.hamburger-menu {
+    --x-width: calc(var(--hamburger-height) * 1.41421356237);
+    display: none;
+    flex-direction: column;
+    gap: var(--hamburger-gap);
+    width: max-content;
+    top: var(--hamburger-margin);
+    left: var(--hamburger-margin);
+    z-index: 2;
+
+}
+.hamburger-menu:has(input:checked) {
+    --foreground: black;
+    --background: white;
+}
+.hamburger-menu:has(input:focus-visible)::before,
+.hamburger-menu:has(input:focus-visible)::after,
+.hamburger-menu input:focus-visible {
+    border: 1px solid var(--background);
+    box-shadow: 0 0 0 1px var(--foreground);
+}
+
+.hamburger-menu::before,
+.hamburger-menu::after,
+.hamburger-menu input {
+    padding: 0; margin: 0;
+    content: "";
+    width: var(--bar-width);
+    height: var(--bar-height);
+    background-color: var(--foreground);
+    border-radius: 9999px;
+    transform-origin: left center;
+    transition: opacity var(--animation-timing), width var(--animation-timing), rotate var(--animation-timing), translate var(--animation-timing), background-color var(--animation-timing);
+}
+.hamburger-menu input {
+    appearance: none;
+    padding: 0; margin: 0;
+    outline: none;
+    pointer-events: none;
+}
+.hamburger-menu:has(input:checked)::before {
+    rotate: 45deg;
+    width: var(--x-width);
+    translate: 0 calc(var(--bar-height)/ -2);
+}
+.hamburger-menu:has(input:checked)::after {
+    rotate: -45deg;
+    width: var(--x-width);
+    translate: 0 calc(var(--bar-height)/ 2);
+    
+}
+.hamburger-menu input:checked {
+    opacity: 0;
+    width: 0;
+    color: #050505;
+} 
+.sidebar {
+    display: none;
+    transition: translate var(--animation-timing);
+    translate: 0px -100%;    
+    padding-top: calc(var(--hamburger-height) + var(--hamburger-margin) + 1rem);
+    background-color: var(--foreground);
+    color: var(--background);
+    min-width: 10rem;
+    min-height: 50vh;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin-left: 0;
+    order: -2;    
+}
+.sidebar nav {
+    padding: 0rem 1rem;
+}
+.hamburger-menu:has(input:checked) + .sidebar {
+    translate: 0;
+}
+/* css for the header starts here */
 header {        
     text-decoration: none;
     margin: 0; padding: 0;
@@ -61,7 +179,32 @@ header * {
     background-color: transparent;
     color: white; text-transform: capitalize;
 }
+/* Header mobile responsiveness */
 
+@media (max-width:700px) {
+    
+    .navigation {
+        display: none;
+    }
+    .navigation button {
+        display: block;
+    }
+    .hamburger-menu {
+        display: flex;
+        align-items: center;
+    }
+    /* Show mobile call button */
+    .mobile-call-button {
+        display: flex;                
+    }
+      /* Adjust sidebar position for right-side hamburger */
+      .sidebar {
+        right: 0;
+        left: auto;
+        display: flex;        
+    }
+
+}
 body {    
     font-family: "questrial";
     font-optical-sizing: auto;
@@ -72,6 +215,7 @@ body {
     background-size: 30px 30px;
        
 }
+
 /* body::before {
     content: "";
     position: absolute; 
@@ -94,8 +238,11 @@ body {
     height: 65dvh; 
 }
 #hero-text {
-    width: 66.5%; height: 70%;
-    
+    width: 66.5%; height: 70%;    
+}
+h1 {
+    font-size: 7rem;
+    font-weight: 600;
 }
 #hero-subtitle {
     display: flex; flex-direction: column;
@@ -145,9 +292,7 @@ body {
     margin-top: 0.5%;
 }
 
-h1 {
-    font-size: 6.5rem;
-}
+
 hr {
     height: 1px solid gray;
 }
@@ -201,7 +346,7 @@ hr {
     
 }
 .description {
-    width: 30%;
+    width: 50%;
     padding-left: 5%; padding-right: 5%;
     font-size: 1rem;
     margin-left: 10%;
@@ -346,7 +491,7 @@ button .youtube:hover {
     margin-top: 5%; margin-bottom: 5%;
 }
 .about-us-text {
-    width: 20%;
+    width: 35%;
     padding-left: 5%; padding-right: 5%;
     font-size: 1.5rem;
 }
@@ -357,7 +502,7 @@ button .youtube:hover {
     font-weight: 400;
 }
 .about-us-img {
-    width: 40%; height: 50dvh;
+    width: 35%; height: 50dvh;
     background-image: url(images/services/website7.jpg);
     background-position: center center;
     border-radius: 40px;
@@ -584,6 +729,11 @@ footer {
     display: flex;
     justify-content: space-between;
 }
+.copyright {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 .inner-footer>.copyright {
     font-size: .8rem;
     width: 100%;
@@ -798,6 +948,9 @@ footer {
         
         font-size: 1rem;
     }
+    .description p {
+        max-width: 100%;
+    }
     
     
 }
@@ -830,21 +983,42 @@ footer {
     .hero-hr {
         margin-top: 20%;
     }
+    .description p {
+        max-width: 100%;
+    }
 }
 /* Small Tablets: 481px - 768px */
 @media (min-width: 481px) and (max-width: 768px) {
     .hero-main {
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
     }
-    #hero-text {
+    #hero-text h1 {
         width: 100%;
-        text-align: center;
-        font-size: 2rem;
+        text-align: left;
+        font-size: 3.5rem;
     }
     #hero-subtitle {
         width: 100%;
         padding: 0;
+        margin-top: -3rem;        
+    }
+    #hero-subtitle h3 {
+        font-size: 1.5rem;
+    }
+    #hero-reasons {
+        margin-top: -1rem;
+        width: 100%;
+    }
+    .reason {
+        max-width: 12rem;
+        padding: 0 1%;
+    }
+    .reason h2 {
+        font-size: 1.3rem;
+    }
+    .reason p {
+        font-size: 1rem;
     }
     .description {
         margin-left: 0;
@@ -854,6 +1028,7 @@ footer {
 
     .description p {
         width: 35rem;
+        max-width: 100%;
     }
     .project-images {
         grid-template-columns: 1fr 1fr;
@@ -874,8 +1049,17 @@ footer {
         align-items: center;
     }
     .about-us-text {
-        width: 80%;
-        text-align: center;
+        width: 90%;    
+    }
+    .about-us-text h3 {
+        font-size: 1.4rem;
+    }
+    .about-us-text h2 {
+        font-size: 2rem;
+        margin-top: 3rem;
+    }
+    .about-us-text p {
+        font-size: 1.2rem;
     }
     .about-us-img {
         width: 80%;
@@ -889,6 +1073,27 @@ footer {
     .service-offering {
         flex-direction: column;
         align-items: center;
+    }
+    .service-hover {
+        display: flex; flex-direction: column; transform: translateY(180px);
+        
+    }
+    .service-hover:hover {
+        transform: translateY(180px);
+    }
+    .service {
+        box-sizing: border-box;
+    }
+    .service h3 {
+        font-size: 2.3rem;
+        justify-content: center;
+        width: 45%;
+    }
+    .service ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 55%;
     }
     #scrolling-pictures {
         grid-template-columns: 1fr 1fr 1fr;
@@ -920,9 +1125,37 @@ footer {
         font-size: 1.2rem;
     }
 }
-
+@media (min-width:769px) and (max-width: 1192px) {
+    #hero-text h1 {
+        font-size: 5rem;
+    }
+    
+}
 
 @media screen and (max-width: 1024px) {
+    /*  This section addresses the about-us page */
+    .about-us {
+        flex-direction: column;
+        align-items: center;
+    }
+    .about-us-text {
+        width: 90%;    
+    }
+    .about-us-text h3 {
+        font-size: 1.4rem;
+    }
+    .about-us-text h2 {
+        font-size: 2rem;
+        margin-top: 3rem;
+    }
+    .about-us-text p {
+        font-size: 1.2rem;
+    }
+    .about-us-img {
+        width: 80%;
+        height: 40vh;
+        margin-top: 20px;
+    }
     .contact-page {
       margin-left: 0%;
       margin-right: 0%;
@@ -1166,3 +1399,5 @@ footer {
       gap: 15px;
     }
   }
+
+  /* Header mobile responsiveness */

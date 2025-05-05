@@ -4,7 +4,7 @@
         "plaintext": false,
         "markdown": false,
         "scminput": false,
-        "html": true,
+        "html": false,
         "css": false
     }
 }
