@@ -2,21 +2,38 @@
 class SpecialHeader extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
-    <header>
-        <div class="inner-header">
-            <div class="logo-container">
-                <a href="index.html"><img src="images/icons/logo/Orban Forest Logo_white_website.png"/></a>
-                <a href="index.html"><p>Orban Forest Inc.</p></a>
+    <section class="responsive-header">
+        <header>
+            <div class="inner-header">
+                <div class="logo-container">
+                    <a href="index.html"><img src="images/icons/logo/Orban Forest Logo_white_website.png"/></a>
+                    <a><p>Orban Forest Inc.</p></a>
+                </div>
                 
+                
+                <ul class="navigation">
+                    <a href="index.html"><li>Home</li></a>
+                    <a href="about-us.html"><li>About Us</li></a>
+                    <a href="contact-us.html"><li>Contact Us</li></a>
+                    <a href="tel:1-365-994-8961"><li><button>Call Us</button></li></a>
+                </ul>
+                <label class="hamburger-menu">
+                    <input type="checkbox">
+                </label>
+                <aside class="sidebar">
+                    <nav>
+                        <div><a href="index.html">Home</a></div>
+                        <div><a href="about-us.html">About Us</a></div>
+                        <div><a href="contact-us.html">Contact Us</a></div>
+                        <div><button><a href="tel:13659948961">Call Us</a></button></div>
+                    </nav>
+                </aside>         
             </div>
-            <ul class="navigation">
-                <a href="index.html"><li>Home</li></a>
-                <a href="about-us.html"><li>About Us</li></a>
-                <a href="contact-us.html"><li>Contact Us</li></a>
-                <a href="tel:+13659948961"><li><button>Call Us</button></li></a>
-            </ul>
+        </header>
+        <div class="mobile-call-button">
+            <a href="tel:1-365-994-8961"><button>Call us</button></a>
         </div>
-    </header>
+    </section>
     `;
   }
 }
@@ -33,10 +50,13 @@ class SpecialFooter extends HTMLElement {
             
             <div class="footer-info">
                 <p>+13659948961</p>
-                <a href=#top><img src="images/icons/arrow_white_1.png"></a>  
+                  
                 <p>hello@orbanforest.ca</p>                                              
             </div>
-            <div class="copyright"><p>Orban Forest Inc &copy; 2025</p></div>
+            <div class="copyright">
+                <a><img src="images/icons/arrow_white_1.png"></a>
+                <p>Orban Forest Inc &copy; 2025</p>
+            </div>
         </div>
 
     </footer>
