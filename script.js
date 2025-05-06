@@ -15,7 +15,7 @@ class SpecialHeader extends HTMLElement {
                     <a href="index.html"><li>Home</li></a>
                     <a href="about-us.html"><li>About Us</li></a>
                     <a href="contact-us.html"><li>Contact Us</li></a>
-                    <a href="https://wa.me/+13659948961"><li><button>Call Us</button></li></a>
+                    <a id="call-button" href="https://wa.me/+13659948961"><li><button>Call Us</button></li></a>
                 </ul>
                 <label class="hamburger-menu">
                     <input type="checkbox">
@@ -97,6 +97,11 @@ class SpecialFooter extends HTMLElement {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: -4rem;
+}
+.copyright a:hover {
+    transform: scale(120%);
+    transition: 200ms ease-in-out;
 }
 .inner-footer>.copyright {
     font-size: .8rem;

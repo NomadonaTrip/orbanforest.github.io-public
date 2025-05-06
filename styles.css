@@ -11,6 +11,8 @@
     --hamburger-margin:10px;
     --animation-timing: 200ms ease-in-out;
     --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+    --brand-color-light: #a82eff;
+    --brand-color-dark: #7222ad;
 }
 .responsive-header {
     display: flex;
@@ -19,6 +21,12 @@
     padding: 0;
     width: 100%;
     align-items: center;
+}
+#call-button button {
+    border: 1px solid  var(--brand-color-light);
+}
+#call-button button:hover {
+    background-color: var(--brand-color-light);
 }
 .responsive-header>.mobile-call-button {
     align-items: center;
@@ -244,6 +252,9 @@ h1 {
     font-size: 7rem;
     font-weight: 600;
 }
+h1 span {
+    color: #a82eff;
+}
 #hero-subtitle {
     display: flex; flex-direction: column;
     justify-content: flex-end; 
@@ -305,7 +316,7 @@ button:hover {
 
 
 hr {
-    height: 1px solid gray;
+    height: 1px solid rgb(53, 53, 53);
 }
 /* This section describes the Buyer Conversation section of the home page */
 #conversation {
@@ -459,6 +470,10 @@ button .youtube:hover {
     display: flex; flex-direction: column; 
     align-items: center; 
 }
+#icon img:hover {
+    transform: scale(140%);
+    transition: 200ms ease-in-out;
+}
 #process-2 img {
     width: 70px; display: flex; justify-content: center;
 }
@@ -571,7 +586,7 @@ button .youtube:hover {
     transition: .3s cubic-bezier(0.3, 0.8, 0.3, 1.5);
 }
 .service-hover:hover {
-    transform: translateY(-155px); transition: .3s cubic-bezier(0.3, 0.8, 0.3, 1.5);
+    transform: translateY(-165px); transition: .3s cubic-bezier(0.3, 0.8, 0.3, 1.5);
 }
 .service>h3 {
     font-size: 4rem; display: flex; align-items: center;
@@ -733,6 +748,9 @@ form button:hover {
     transition: 300ms ease-in-out;
 }
 /* This section describes the page footer */
+#lower-line {
+    margin-top: 3rem;
+}
 footer {
     padding: 0;
     list-style: none; text-decoration: none;
