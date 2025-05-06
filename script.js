@@ -15,7 +15,7 @@ class SpecialHeader extends HTMLElement {
                     <a href="index.html"><li>Home</li></a>
                     <a href="about-us.html"><li>About Us</li></a>
                     <a href="contact-us.html"><li>Contact Us</li></a>
-                    <a href="tel:1-365-994-8961"><li><button>Call Us</button></li></a>
+                    <a href="https://wa.me/+13659948961"><li><button>Call Us</button></li></a>
                 </ul>
                 <label class="hamburger-menu">
                     <input type="checkbox">
@@ -25,7 +25,7 @@ class SpecialHeader extends HTMLElement {
                         <div><a href="index.html">Home</a></div>
                         <div><a href="about-us.html">About Us</a></div>
                         <div><a href="contact-us.html">Contact Us</a></div>
-                        <div><button><a href="tel:13659948961">Call Us</a></button></div>
+                        
                     </nav>
                 </aside>         
             </div>
@@ -42,30 +42,116 @@ class SpecialHeader extends HTMLElement {
 customElements.define('special-header', SpecialHeader);
 
 class SpecialFooter extends HTMLElement {
-  connectedCallback() {
-    this.innerHTML = `
+  // connectedCallback() {
+  //   this.innerHTML = `
+  constructor() {
+    super();
+    this.attachShadow({ mode: 'open' });
+    this.shadowRoot.innerHTML = `
     <footer class="footer-container">
-        
         <div class="inner-footer">
-            
-            <div class="footer-info">
-                <p>+13659948961</p>
-                  
-                <p>hello@orbanforest.ca</p>                                              
-            </div>
-            <div class="copyright">
-                <a><img src="images/icons/arrow_white_1.png"></a>
-                <p>Orban Forest Inc &copy; 2025</p>
-            </div>
+          <div class="footer-info">
+            <p>+13659948961</p>
+            <p>hello@orbanforest.ca</p>
+          </div>
+          <div class="copyright">
+            <a id="scrollTopLink" href="#"><img src="images/icons/arrow_white_1.png"></a>
+            <p>Orban Forest Inc &copy; 2025</p>
+          </div>
         </div>
+      </footer>
+      <style>
+        footer {
+    padding: 0;
+    list-style: none; text-decoration: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;    
+    overflow: hidden;
+    padding: 70px 0;
+    box-sizing: border-box;    
+    margin-top: -3rem;
+}
+.inner-footer {   
+    margin: 0 auto;
+    width: 1100px;
+    height: 100%;
 
-    </footer>
+    display: flex; flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+}
+.footer-logo {
+    display: flex;
+    width: 60%;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.6rem;
+}
+.footer-info {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+.copyright {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.inner-footer>.copyright {
+    font-size: .8rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+@media (max-width: 360px) {
+    .inner-footer {
+      padding: 40px 0;
+    }
+    
+    .footer-info {
+      flex-direction: column;
+      align-items: center;
+      gap: 15px;
+    }
+}
+@media screen and (max-width: 480px) {
+        .inner-footer {
+      width: 95%;
+      margin-top: -3rem;
+      margin-bottom: -4rem;
+    }
+    
+    .footer-logo {
+      width: 90%;
+    }
+}
+      </style>
     `;
+    this.scrollTopLink = this.shadowRoot.getElementById('scrollTopLink');
+    
+    // Using arrow function to preserve 'this' context
+    this.scrollTopLink.addEventListener('click', (event) => {
+      this.scrollToTop(event);
+    });
+  }
+  
+  disconnectedCallback() {
+    
+    this.scrollTopLink.removeEventListener('click', this.scrollTopLink.onclick);
+  }
+
+  scrollToTop(event) {
+    event.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth' // Optional: for smooth scrolling
+    });
   }
 }
 
-
 customElements.define('special-footer', SpecialFooter);
+
 
 
 // The header and footer templating ends here
