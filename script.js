@@ -34,6 +34,11 @@ class SpecialHeader extends HTMLElement {
             <a href="tel:1-365-994-8961"><button>Call us</button></a>
         </div>
     </section>
+    <style>
+      #call-button button {
+        background-color: #a82eff;
+      }
+    </style>
     `;
   }
 }

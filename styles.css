@@ -23,10 +23,11 @@
     align-items: center;
 }
 #call-button button {
-    border: 1px solid  var(--brand-color-light);
+    background-color: #a82eff;
+    
 }
 #call-button button:hover {
-    background-color: var(--brand-color-light);
+    border: 1px solid  #a82eff;
 }
 .responsive-header>.mobile-call-button {
     align-items: center;
@@ -43,7 +44,7 @@
     font-size: 1rem;
     border: 1px solid gray;
     border-radius: 10px;
-    background-color: transparent;
+    background-color: #a82eff;
     color: white;
     text-transform: capitalize;
 }
