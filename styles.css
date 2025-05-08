@@ -992,20 +992,21 @@ footer {
         width: 100%;
         margin-bottom: 10%;
     }
-    .service h3 {
-        font-size: 2rem;
+    .service>h3 {
+        font-size: 1.5rem;
     }
     .service ul {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
+        height: 100%;
     }
     .service li {
-        font-size: 1rem;
+        font-size: 0.8rem;
     }
     .service-hover {
         width: 100%;
-        transform: translateY(250px);
+        transform: translateY(215px);
     }
     #scrolling-pictures {
         grid-template-columns: 1fr 1fr;
