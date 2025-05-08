@@ -1,4 +1,6 @@
 
+
+//  The special header and footer starts here
 class SpecialHeader extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
@@ -33,7 +35,9 @@ class SpecialHeader extends HTMLElement {
         <div class="mobile-call-button">
             <a href="tel:1-365-994-8961"><button>Call us</button></a>
         </div>
+     <hr class="header-hr">   
     </section>
+    
     <style>
       #call-button button {
         background-color: #a82eff;
@@ -166,7 +170,41 @@ customElements.define('special-footer', SpecialFooter);
 
 // The header and footer templating ends here
 
+// The style on scroll effect on the header starts here
 
+const responsiveHeader = document.querySelector('.responsive-header')
+const scrollWatcher = document.createElement('div');
+
+scrollWatcher.setAttribute('data-scroll-watcher', '');
+
+// Style the watcher element
+scrollWatcher.style.position = 'absolute';
+scrollWatcher.style.top = '0';
+scrollWatcher.style.height = '1px';
+scrollWatcher.style.width = '100%';
+scrollWatcher.style.pointerEvents = 'none';
+scrollWatcher.style.opacity = '0';
+
+// Insert the watcher before the header
+responsiveHeader.before(scrollWatcher);
+
+// Create the IntersectionObserver
+const navObserver = new IntersectionObserver((entries) => {
+  const [entry] = entries;
+  
+  // Toggle the 'sticking' class when the watcher is no longer visible
+  responsiveHeader.classList.toggle('sticking', !entry.isIntersecting);
+}, {
+  rootMargin: '-1px 0px 0px 0px',
+  threshold: 0
+});
+
+// Start observing the scroll watcher
+
+navObserver.observe(scrollWatcher)
+
+
+// --------------------------------------------------------------------
 // hover glare and tilt effects start here
 
 
