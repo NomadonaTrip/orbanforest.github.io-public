@@ -3,8 +3,8 @@
 }
 
 :root {
-    --bar-width: 60px;
-    --bar-height: 8px;
+    --bar-width: 40px;
+    --bar-height: 4px;
     --foreground: white;
     --background: black;
     --hamburger-gap: 6px;
@@ -24,10 +24,9 @@
     position: sticky;
     top: 0; 
     margin-top: -1rem;
-    z-index: 1000; 
+    z-index: 20; 
     background-color: rgba(21, 21, 21, 0.1); /* Semi-transparent by default */
     transition: background-color 0.3s ease; 
-    overflow: hidden;    
 }
 .responsive-header.sticking {
     background-color: rgba(21, 21, 21, 1); /* Fully opaque when sticky */
@@ -71,7 +70,7 @@
     width: max-content;
     top: var(--hamburger-margin);
     left: var(--hamburger-margin);
-    z-index: 4;
+    z-index: 45;
 
 }
 .hamburger-menu:has(input:checked) {
@@ -133,7 +132,7 @@
     left: 0;
     top: 0;
     margin-left: 0;
-    z-index: 3;    
+    z-index: 35;    
 }
 .sidebar nav {
     padding: 0rem 1rem;
@@ -269,8 +268,8 @@ body {
     top: 0; left: 0;
     width: 100%; height: 100%;
     background: #2c2c2c;
-    transform: scale(0.1);
-    box-shadow: 0 0 10px #2c2c2c,
+    transform: scale(0.1); */
+    /* box-shadow: 0 0 10px #2c2c2c,
                 0 0 20px #2c2c2c,
                 0 0 40px #2c2c2c,
                 0 0 60px #2c2c2c,;
@@ -632,6 +631,7 @@ button .youtube:hover {
 .service-hover {
     display: flex; flex-direction: column; transform: translateY(10px);
     transition: .3s cubic-bezier(0.3, 0.8, 0.3, 1.5);
+    width: 100%;
 }
 .service-hover:hover {
     transform: translateY(-165px); transition: .3s cubic-bezier(0.3, 0.8, 0.3, 1.5);
@@ -1242,6 +1242,22 @@ footer {
 @media (min-width:769px) and (max-width: 1192px) {
     #hero-text h1 {
         font-size: 5rem;
+    }
+    .service>h3 {
+        font-size: 2.4rem;  transform: translateY(-55px);  
+    }
+    .service-hover ul {     
+        display: flex; 
+        flex-direction: column;
+        justify-content: space-between;
+        transform: translateY(-55px);
+        text-transform: capitalize;
+        font-size: 1.1rem;
+    }
+    .service-hover {
+        display: flex; flex-direction: column; transform: translateY(60px);
+        transition: .3s cubic-bezier(0.3, 0.8, 0.3, 1.5);
+        width: 100%;
     }
     
 }

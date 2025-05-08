@@ -6,6 +6,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Questrial&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="scrollers.css">
     <title>About Us</title>
@@ -16,18 +17,18 @@
     <!-- About Us section -->
     <div class="about-us">
         <div class="about-us-text">
-            <h3>Who we are </h3>
-            <h2>We craft and we build</h2>
-            <p>
+            <h3 data-aos="fade-right">Who we are </h3>
+            <h2 data-aos="fade-in">We craft and we build</h2>
+            <p data-aos="fade-in">
                 At OrbanForest Inc., we are a cross functional team of experts, partnering with you to create your unique, virtual fingerprint.
             </p>
-            <p>
+            <p data-aos="fade-in">
                 As a creative technology company, we leverage smart, inspired and authentic design to support small and medium sized businesses in effectively communicating value to their customers.
 
             </p>
             <a href="contact-us.html"><button>reach out</button></a>
         </div>
-        <div class="about-us-img"></div>
+        <div class="about-us-img" data-aos="fade-right"></div>
     </div>
     <hr>
     <!-- Services section -->
@@ -39,9 +40,9 @@
             <h2>Services</h2>        
         </div>
         
-        <div class="service-offering">
+        <div class="service-offering" data-aos="fade-left">
             <div class="service-hover">
-                <div class="service">
+                <div class="service" >
                     <h3>Web Design</h3>            
                     <ul>
                         <li>Wordpress</li>
@@ -61,7 +62,7 @@
                 </div>
             </div>            
         </div>
-        <div class="service-offering">
+        <div class="service-offering" data-aos="fade-right">
             <div class="service-hover">
                 <div class="service">
                     <h3>Animation</h3>            
@@ -83,7 +84,7 @@
                 </div>
             </div>            
         </div>
-        <div class="service-offering">
+        <div class="service-offering" data-aos="fade-left">
             <div class="service-hover">
                 <div class="service">
                     <h3>Illustration</h3>            
@@ -104,12 +105,15 @@
                 </div>
             </div>            
         </div>
-        <a href="contact-us.html"><button id="start-project">Start a Project </button></a>
+        <a href="contact-us.html" data-aos="fade-in"><button id="start-project">Start a Project </button></a>
      </div>
      
    <hr>
     <special-footer></special-footer>
    <script src="script.js"></script> 
-   
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
