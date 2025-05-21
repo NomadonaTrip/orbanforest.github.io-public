@@ -1,24 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- meta tags begin here -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="When your business speaks to your customers’ true needs, lead generation feels effortless. Web design and digital marketing in Ontario.">
+    <meta name="keywords" content="web designer in Brantford, digital marketing in Southern Ontario, digital marketing on the East coast, web design, web development, animation, 3D animation, advertising, online graphics, Illustration">
+    <meta property="og:description" content="When your business speaks to your customers’ true needs, lead generation feels effortless. Web design and digital marketing in Ontario.">
+    <meta name="author" content="Tayo">
+    <meta property="og:title" content="Home: Orban Forest Inc.">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- meta tags end here -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Exo+2:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Questrial&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="styles.css">
-    <title>Orban Forest Inc.</title>
+    <title>Home: Orban Forest Inc.</title>
     <link rel="icon" href="images/icons/favicon.png">
 </head>
 <body>
     <special-header></special-header>
-    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const changingWordSpan = document.getElementById('changing-word');
+    const words = ["Websites", "Animations", "Illustrations"];
+    let currentIndex = 0;
+
+    function changeWord() {
+        // Fade out the current word (optional, for smoother transition)
+        changingWordSpan.style.opacity = 0;
+
+        setTimeout(() => {
+            // Change the word after a short delay
+            currentIndex = (currentIndex + 1) % words.length;
+            changingWordSpan.textContent = words[currentIndex];
+
+            // Fade in the new word
+            changingWordSpan.style.opacity = 1;
+        }, 800); // This delay should match CSS transition duration
+    }
+
+    // Call changeWord initially and then at an interval
+    setInterval(changeWord, 4000); // Change word every 4 seconds (4000 milliseconds)
+});
+    </script>
     <!-- Hero section -->
     <div class="hero">
         <div class="hero-main">
             <div id="hero-text">
-                <h1>For <span>Websites</span> that work as hard as you do</h1>
+                <h1>For <span id="changing-word">Websites</span> that work as hard as you do</h1>
             </div>
             <div id="hero-subtitle">
                 <h3>Online experiences that attract and engage, helping you build your customer’s trust. </h3>
