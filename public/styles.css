@@ -228,6 +228,11 @@ header * {
   width: 100%;
 }
 /* Header mobile responsiveness */
+@media (max-width: 480px) {
+  .responsive-header {
+    width: 100%;
+  }
+}
 
 @media (max-width: 700px) {
   .navigation {
@@ -279,10 +284,8 @@ body {
                 0 0 60px #2c2c2c,;
 } */
 .hero {
-  padding: 2%;
+  padding: 2% 0% 6% 2%;
   height: 100%;
-  padding-right: 5%;
-  padding-left: 4%;
 }
 .hero-main {
   display: flex;
@@ -293,6 +296,7 @@ body {
   width: 66.5%;
   height: 70%;
   margin-bottom: 2rem;
+  padding-left: 2%;
 }
 h1 {
   font-size: 7rem;
@@ -355,6 +359,7 @@ button:hover {
   display: flex;
   margin-top: 5%;
   height: 30dvh;
+  padding-left: 1.5%;
 }
 /* the reason class describes the behavior of each block of text highlighting a selling point */
 .reason {
@@ -512,6 +517,7 @@ button .youtube:hover {
 .image-grid {
   display: flex;
   justify-content: center;
+  margin-top: -2rem;
 }
 .project-images {
   width: 82rem;
@@ -581,6 +587,7 @@ button .youtube:hover {
 }
 #icon > p {
   text-transform: capitalize;
+  text-align: center;
 }
 
 #ready-to-create {
@@ -948,13 +955,17 @@ footer {
 
 /* Mobile Phones: 360px - 480px */
 @media (max-width: 480px) {
+  .hero {
+    width: 100%;
+  }
   .hero-main {
     flex-direction: column;
     align-items: flex-start;
     overflow: hidden;
+    width: 100%;
   }
   #hero-text {
-    width: 95%;
+    width: 100%;
     text-align: left;
     padding-right: 15%;
   }
@@ -964,11 +975,15 @@ footer {
   }
   #hero-subtitle {
     width: 90%;
-    padding-right: 10%;
+    /* padding-right: 10%; */
     margin-top: -12rem;
+    padding-left: 2%;
   }
   #hero-subtitle h3 {
     font-size: 1rem;
+  }
+  #hero-subtitle a {
+    padding-left: 2%;
   }
   #hero-reasons {
     flex-direction: column;
@@ -989,12 +1004,19 @@ footer {
   }
   #conversation {
     font-size: 2rem;
-    padding-left: 2%;
+    padding-left: 4%;
+    max-width: 100%;
   }
   .conversation-hr {
     margin: 30px 0px;
   }
-
+  .our-work {
+    padding-left: 2%;
+    width: 100%;
+  }
+  .project {
+    align-items: center;
+  }
   .description {
     width: 100%;
     margin-top: 6%;
@@ -1003,6 +1025,9 @@ footer {
   }
   .description p {
     font-size: 1rem;
+  }
+  .image-grid {
+    margin-top: 0rem;
   }
   .project-images {
     grid-template-columns: 1fr;
@@ -1015,6 +1040,16 @@ footer {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
     width: 100%;
+    padding-left: 4%;
+  }
+  .home-cta {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  #ready-to-create {
+    padding-left: 2%;
+    width: 90%;
   }
   #ready-to-create h4 {
     font-size: 2rem;
@@ -1157,6 +1192,15 @@ footer {
   .description p {
     max-width: 100%;
   }
+  /* Hide the reasons subsection of the hero page when screen height < 750px */
+  @media (max-height: 750px) {
+    #hero-text {
+      margin-bottom: 7rem;
+    }
+    #hero-reasons {
+      display: none;
+    }
+  }
 }
 @media screen and (min-width: 300px) and (max-width: 390px) {
   #hero-text {
@@ -1174,6 +1218,7 @@ footer {
   #hero-subtitle h3 {
     font-size: 1rem;
     margin-bottom: 1.5rem;
+    padding-left: 2%;
   }
   #hero-reasons {
     flex-direction: column;
@@ -1197,6 +1242,21 @@ footer {
   .description p {
     max-width: 100%;
   }
+  .image-grid {
+    width: 90%;
+  }
+  .our-process {
+    width: 90%;
+  }
+  #ready-to-create {
+    width: 90%;
+  }
+  .inner-footer {
+    width: 90%;
+  }
+  hr {
+    max-width: 90%;
+  }
   /* Hide the reasons subsection of the hero page when screen height < 750px */
   @media (max-height: 750px) {
     #hero-text {
@@ -1205,6 +1265,8 @@ footer {
     #hero-reasons {
       display: none;
     }
+  }
+  @media (orientation: landscape) {
   }
 }
 /* Small Tablets: 481px - 768px */
