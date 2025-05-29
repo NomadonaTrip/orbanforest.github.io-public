@@ -116,9 +116,11 @@ class SpecialFooter extends HTMLElement {
     justify-content: center;
 }
 @media (max-width: 360px) {
-    
+footer {
+      margin-top: 2rem;
+}    
 .inner-footer {
-      padding: 40px 0;
+      padding: 40px 0px;
       width: 100%;
     }
     
@@ -129,7 +131,11 @@ class SpecialFooter extends HTMLElement {
     }
 }
 @media screen and (max-width: 480px) {
-        .inner-footer {
+    footer {
+      margin-top: 0.2rem;
+      margin-bottom: 1rem;
+}  
+    .inner-footer {
       width: 95%;
       margin-top: -3rem;
       margin-bottom: -4rem;
