@@ -954,7 +954,7 @@ footer {
 /* This section describes media queries for the Home page */
 
 /* Mobile Phones: 360px - 480px */
-@media (max-width: 480px) {
+@media (orientation: portrait) and (max-width: 480px) {
   .hero {
     width: 100%;
   }
@@ -1202,6 +1202,52 @@ footer {
     }
   }
 }
+
+/* media queries for the mobile screens in landscape mode */
+
+@media only screen and (orientation: landscape) and (max-height: 768px) {
+  #hero-text {
+    font-size: 1rem;
+  }
+  #hero-subtitle h3 {
+    display: none;
+  }
+  #hero-subtitle a {
+    margin-top: 4rem;
+    padding-left: 1rem;
+  }
+  #hero-reasons {
+    display: none;
+  }
+  #conversation {
+    padding-left: 5%;
+  }
+  #conversation h3 {
+    font-size: 2rem;
+  }
+  .description {
+    margin-bottom: 3rem;
+  }
+  .description p {
+    font-size: 1rem;
+  }
+  .image-grid {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: -2rem;
+  }
+  .project-images {
+    width: 30rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0px;
+    grid-template-rows: 1fr 1fr;
+  }
+  .project-images * {
+    width: 18rem;
+  }
+}
+
 @media screen and (min-width: 300px) and (max-width: 390px) {
   #hero-text {
     margin-bottom: 1rem;
@@ -1267,6 +1313,15 @@ footer {
     }
   }
   @media (orientation: landscape) {
+    #hero-text {
+      font-size: 3rem;
+    }
+    #hero-subtitle {
+      display: none;
+    }
+    #hero-reasons {
+      display: none;
+    }
   }
 }
 /* Small Tablets: 481px - 768px */

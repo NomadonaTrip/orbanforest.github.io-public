@@ -211,7 +211,9 @@ navObserver.observe(scrollWatcher);
 // --------------------------------------------------------------------
 // hover glare and tilt effects start here
 
-if ($(window).width() > 1200) {
+// media query set for screen width 1200px
+
+if (window.innerWidth > 1280) {
   const dotSize = 5;
 
   const spacing = dotSize * 2;
