@@ -6,7 +6,7 @@ class SpecialHeader extends HTMLElement {
         <header>
             <div class="inner-header">
                 <div class="logo-container">
-                    <a href="index.html"><img src="images/icons/logo/Orban Forest Logo_white_website.png"/></a>
+                    <a href="index.html"><img src="images/icons/logo/Orban Forest Logo_white_website.png" alt="orban forest logo white."/></a>
                     <a><p>Orban Forest Inc.</p></a>
                 </div>
                 
@@ -61,7 +61,7 @@ class SpecialFooter extends HTMLElement {
             <p>hello@orbanforest.ca</p>
           </div>
           <div class="copyright">
-            <a id="scrollTopLink" href="#"><img src="images/icons/arrow_white_1.png"></a>
+            <a id="scrollTopLink" href="#"><img src="images/icons/arrow_white_1.png" alt="Back to top arrow. Description: white arrow pointing up."></a>
             <p>Orban Forest Inc &copy; 2025</p>
           </div>
         </div>
