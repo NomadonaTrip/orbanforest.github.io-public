@@ -15,7 +15,7 @@ class SpecialHeader extends HTMLElement {
                     <a href="index.html"><li>Home</li></a>
                     <a href="about-us.html"><li>About Us</li></a>
                     <a href="contact-us.html"><li>Contact Us</li></a>
-                    <a id="call-button" href="https://wa.me/+13659948961"><li><button>Call Us</button></li></a>
+                    <a id="call-button" href="https://wa.me/+13659948961"><li><button>Call Us:<br> 365 994 8961</button></li></a>
                 </ul>
                 <label class="hamburger-menu">
                     <input type="checkbox">

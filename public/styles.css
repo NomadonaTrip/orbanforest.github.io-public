@@ -37,6 +37,7 @@
 }
 #call-button button {
   background-color: #a82eff;
+  width: 8rem;
   border: none;
 }
 #call-button button:hover {
