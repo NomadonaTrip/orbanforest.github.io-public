@@ -306,6 +306,9 @@ h1 {
 h1 span {
   color: #a82eff;
   transition: opacity 800ms ease-in-out;
+  width: 8.5ch;
+  display: inline-block;
+  text-align: left;
 }
 #hero-subtitle {
   display: flex;
